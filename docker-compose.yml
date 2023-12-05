@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  scores:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: rotemdror/scores-devops:latest
+    volumes:
+      - /Users/Rotem/PycharmProjects/WOG/test:/app/data
+    ports:
+      - "8777:5000"

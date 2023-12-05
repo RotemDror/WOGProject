@@ -4,6 +4,14 @@ pipeline {
     stages {
 
         stage('Build Docker Image') {
+                steps {
+                    script {
+                        sh 'sudo apt install docker-compose'
+                    }
+                }
+            }
+
+        stage('Build Docker Image') {
             steps {
                 script {
                     sh 'docker-compose build'

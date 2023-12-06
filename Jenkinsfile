@@ -8,6 +8,14 @@ pipeline {
 
     stages {
 
+        stage('Install Python Dependencies') {
+            steps {
+                script {
+                    sh 'pip3 install -r requirements.txt'
+                }
+            }
+        }
+
         stage('Build Docker Image') {
             steps {
                 script {

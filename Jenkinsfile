@@ -27,7 +27,7 @@ pipeline {
         stage('E2E Tests') {
             steps {
                 script {
-                    def e2eExitCode = sh(script: 'python e2e.py', returnStatus: true)
+                    def e2eExitCode = sh(script: 'python3 e2e.py', returnStatus: true)
                     
                     if (e2eExitCode != 0) {
                         error 'E2E tests failed.'

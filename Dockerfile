@@ -16,6 +16,8 @@ COPY templates/score.html /app/templates
 
 RUN pip install flask
 
+RUN pip install selenium
+
 EXPOSE 5000
 
 VOLUME /app/data

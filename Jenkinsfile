@@ -1,13 +1,10 @@
 pipeline {
     agent any
 
-    docker {
-        image 'python:3.8'
-        }
-
     environment {
-        PATH = "$PATH:/usr/local/bin"
+        PATH = "$PATH:/usr/local/bin:/Library/Frameworks/Python.framework/Versions/3.4/bin"
     }
+
 
     stages {
 

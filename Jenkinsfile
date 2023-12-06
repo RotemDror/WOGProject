@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        PATH = "$PATH:/usr/local/bin:/Library/Frameworks/Python.framework/Versions/3.4/bin"
+        PATH = "$PATH:/usr/local/bin:/Library/Frameworks/Python.framework/Versions/3.4/bin:/opt/homebrew/bin"
     }
 
 

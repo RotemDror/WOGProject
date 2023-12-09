@@ -9,7 +9,7 @@ def test_scores_service(url):
 
     try:
         options = webdriver.ChromeOptions()
-        web_driver = webdriver.Chrome(options=options)
+        web_driver = webdriver.Chrome(service=Service("./chromedriver"),options=options)
         web_driver.get(url)
         WebDriverWait(web_driver, 10).until(EC.presence_of_element_located((By.XPATH, "/html/body/p")))
         data = web_driver.find_element(By.XPATH, "/html/body/p")

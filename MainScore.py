@@ -19,6 +19,6 @@ def Score_server():
 
         return render_template('score.html', score=current_score)
 
-    app.run(host="0.0.0.0", port=80)
+    app.run(host="0.0.0.0", port=5000)
 
 Score_server()
